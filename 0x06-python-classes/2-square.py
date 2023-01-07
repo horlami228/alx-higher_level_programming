@@ -5,7 +5,7 @@
 class Square:
 
     """Represents a Square"""
-    
+
     def __init__(self, size=0):
         """initialize with a private instance size
         and an optional argument
