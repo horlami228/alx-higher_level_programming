@@ -5,7 +5,13 @@
 class Square:
     def __init__(self, size=0):
         """initialize with a private instance size
-        and an optional argument"""
+        and an optional argument
+
+        Args:
+            size(int): The size of new square
+        Returns:
+            The return value. true for success, false for otherwise
+        """
         if not isinstance(size, int):
             """check if size is int"""
             raise TypeError("size must be an integer")
