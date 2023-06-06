@@ -1,0 +1,1 @@
+This directory focuses on python if/else control and python functions
