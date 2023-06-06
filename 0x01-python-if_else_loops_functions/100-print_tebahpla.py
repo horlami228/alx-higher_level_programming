@@ -6,7 +6,7 @@ i = 1
 for letter in range(ord('z'), ord('a') - 1, -1):
     if i % 2 == 0:
         letter = letter - 32
-        print("{}".format(chr(letter)))
+        print("{}".format(chr(letter)), end="")
     else:
-        print("{}".format(chr(letter)))
+        print("{}".format(chr(letter)), end="")
     i += 1
