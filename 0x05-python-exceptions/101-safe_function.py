@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 
 # This function executes a function safely
 # we can use fct as a pointer to a function
@@ -11,6 +12,6 @@ def safe_function(fct, *args):
     try:
         result = fct(*args)
         return result
-    except Exception as exe:
-        print("Exception:", str(exe))
+    except Exception:
+        print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
         return None
