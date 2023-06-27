@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""
+    defines a square class
+"""
 
 
 class Square:
     """
-        defines a square class
+        Represent a square class
     """
     pass
