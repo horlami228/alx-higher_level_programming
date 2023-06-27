@@ -60,9 +60,10 @@ class Square:
             :return: return true for success. 0 for otherwise
         """
 
-        if value[0] < 0 or value[1] < 0 or len(value) != 2 \
-                or type(value) is not tuple\
-                or type(value[0]) != int or type(value[1]) != int:
+        if (not isinstance(value, tuple) or
+            len(value) != 2 or
+            not all(isinstance(i, int) for i in value) or
+                not all(i >= 0 for i in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
