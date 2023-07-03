@@ -100,4 +100,4 @@ class Rectangle:
 
         :return: a string representation of the Rectangle
         """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return f"Rectangle({self.__width}, {self.__height})"
