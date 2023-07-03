@@ -1,9 +1,9 @@
-    ===
 PYTHON OOP
+=
 
 This directory contains all the python oop(object-oriented programming) project
 
-===
+
 1. 0-rectangle.py: write an empty class Rectangle
 
 2. 1-rectangle.py: Write a class Rectangle that defines a rectangle by: (based on 0-rectangle.py)
