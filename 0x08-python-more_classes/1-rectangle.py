@@ -13,8 +13,8 @@ class Rectangle:
         :param width: Rectangle object width
         :param height: Rectangle object height
         """
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
