@@ -145,7 +145,7 @@ class Rectangle:
         """
         This is a class method that returns a new Rectangle
 
-        :param size: values for the  Rectangle object
+        :param size: values for the Rectangle object
         :return: A new Rectangle object
         """
-        return cls(size, size)
+        return cls(width=size, height=size)

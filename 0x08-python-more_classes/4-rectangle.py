@@ -83,7 +83,7 @@ class Rectangle:
         """
         This function returns a string representation of the object Rectangle
 
-        :return: returns a string
+        :return: Returns a string
         """
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -91,13 +91,14 @@ class Rectangle:
             rectangle = []
             for i in range(self.__height):
                 rectangle.append("#" * self.__width)
-                rectangle.append("\n")
+                if i != self.__width - 1:
+                    rectangle.append("\n")
             return "".join(rectangle)
 
     def __repr__(self):
         """
         It provides an unambiguous representation of an object
 
-        :return: a string representation of the Rectangle
+        :return: A string representation of the Rectangle
         """
         return f"Rectangle({self.__width}, {self.__height})"
