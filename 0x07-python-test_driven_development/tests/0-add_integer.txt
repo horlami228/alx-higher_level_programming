@@ -1,0 +1,86 @@
+
+This function adds only 2 integers
+The name of the function is (add_integer) and it accepts two arguments
+
+import the add_function module
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Test cases
+
+checking with two positive number
+>>> add_integer(5, 5)
+10
+
+---
+
+checking with two positive bigger numbers
+>>> add_integer(270, 500)
+770
+
+---
+
+checking with one negative number argument parameter 2
+>>> add_integer(100, -2)
+98
+
+---
+
+checking with one negative number argument for parameter 1
+>>> add_integer(-2, 100)
+98
+
+---
+
+checking with a float number argument for parameter 1
+>>> add_integer(50.5, 5)
+55
+
+---
+
+checking with float number argument for parameter 2
+>>> add_integer(5, 100.5)
+105
+
+---
+
+checking with only one argument for parameter 1
+>>> add_integer(2)
+100
+
+---
+
+using a try and except block to catch for invalid input type
+============================================================
+checking with string for parameter 1
+>>> try:
+...     print(add_integer("lekan", 10))
+... except Exception as le:
+...     print(le)
+...
+a must be an integer
+
+---
+
+checking with a string for param 2
+>>> try:
+...     print(add_integer(90, "school"))
+... except Exception as le:
+...      print(le)
+...
+b must be an integer
+
+
+checking with no argument
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+checking with a null value
+>>> try:
+...     print(add_integer(None))
+... except Exception as le:
+...      print(le)
+...
+a must be an integer

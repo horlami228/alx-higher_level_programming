@@ -1,0 +1,68 @@
+This function is to divide all elements in a matrix by a given element
+
+A matrix is a rectangular grid of elements arranged in rows and columns. It consists of a collection of values, typically numbers, organized in a two-dimensional structure.
+
+import the function
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+
+>>> matrix = [ [1, 2, 3], [2, 5, 6] ]
+
+This is a list of list, but when the rows and columns are equal, it is referred specifically as a matrix
+
+1. divide the matrix with an int number
+>>> print(matrix_divided(matrix, 2))
+[[0.5, 1.0, 1.5], [1.0, 2.5, 3.0]]
+
+2. divide the matrix with a float number
+>>> print(matrix_divided(matrix, 3.5))
+[[0.29, 0.57, 0.86], [0.57, 1.43, 1.71]]
+
+>>> matrix = [ [1, 2, 3], ["lekan", 5, 6] ]
+
+3. checking if the elements in a list contains int or float
+
+>>> try:
+...     print(matrix_divided(matrix, 5))
+... except Exception as le:
+...     print(le)
+...
+matrix must be a matrix (list of lists) of integers/floats
+
+
+>>> matrix = [ [1, 2, 3], [2, 5, 6, 7] ]
+
+4. check if the matrix is of the same size
+>>> try:
+...     print(matrix_divided(matrix, 5))
+... except Exception as le:
+...     print(le)
+...
+Each row of the matrix must have the same size
+
+
+>>> matrix = [ [1, 2, 3], [2, 5, 6] ]
+
+5. check if the division number is an integer/float
+
+>>> try:
+...     print(matrix_divided(matrix, "25"))
+... except Exception as le:
+...     print(le)
+...
+div must be a number
+
+6. check if division number is 0
+
+>>> try:
+...     print(matrix_divided(matrix, 0))
+... except Exception as le:
+...     print(le)
+...
+division by zero
+
+7. check if the existing matrix was not modified
+
+print(matrix)
+[[1, 2, 3], [2, 5, 6]]
+
