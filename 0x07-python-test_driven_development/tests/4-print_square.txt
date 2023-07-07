@@ -1,0 +1,46 @@
+This function prints a square with # based on the input size
+
+0. import the function
+>>> print_square = __import__("4-print_square").print_square
+
+
+1. check with number
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+2. checks with a small number
+>>> print_square(2)
+##
+##
+
+3. check with a string value
+>>> try:
+...     print_square("5")
+... except Exception as le:
+...     print(le)
+...
+size must be an integer
+
+4. check with a float value
+>>> try:
+...     print_square(3.8)
+... except Exception as le:
+...     print(le)
+...
+size must be an integer
+
+5. check with a value less than 0
+>>> try:
+...     print_square(-2)
+... except Exception as le:
+...     print(le)
+...
+size must be >= 0
+
+if size is equal to zero
+>>> print_square(0)
+
