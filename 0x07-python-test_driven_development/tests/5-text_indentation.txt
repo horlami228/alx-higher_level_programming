@@ -1,0 +1,39 @@
+This function prints two new lines after these characters("?", ".", ":")
+0. import function
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+
+1. check if it prints new lines after a "." character
+>>> text_indentation("Olamilekan is a boy.")
+Olamilekan is a boy.
+<BLANKLINE>
+<BLANKLINE>
+
+2. check if it prints new lines after a "?" character
+>>> text_indentation("is olamilekan a boy?")
+is olamilekan a boy?
+<BLANKLINE>
+<BLANKLINE>
+
+
+3. check if it prints new lines after a ":" character
+>>> text_indentation("what is cache memory:")
+what is cache memory:
+<BLANKLINE>
+<BLANKLINE>
+
+
+4. make sure no space at the beginning an end of a line
+>>> text_indentation("   what is going on today, i know its not monday.    ")
+what is going on today, i know its not monday.
+<BLANKLINE>
+<BLANKLINE>
+
+
+5. check if argument value is a string
+>>> try:
+...      text_indentation(2500)
+... except Exception as le:
+...      print(le)
+...
+text must be a string
