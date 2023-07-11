@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This function converts a JSON string back to an object
+"""
 import json
 
 
