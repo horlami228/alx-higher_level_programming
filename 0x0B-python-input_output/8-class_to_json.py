@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Returns a dictionary description with simple data structure
+"""
 
 
 def class_to_json(obj):
