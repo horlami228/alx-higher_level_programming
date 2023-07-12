@@ -33,4 +33,5 @@ class Rectangle(BaseGeometry):
         Return a string representation for the class
         :return: A string
         """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        return "[{}] {}/{}".format(type(self).__name__,
+                                   self.__width, self.__height)
