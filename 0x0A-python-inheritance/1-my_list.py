@@ -19,15 +19,3 @@ class MyList(list):
                 raise TypeError("list should be only integers")
         list_copy.sort()
         print(list_copy)
-
-
-if __name__ == "__main__":
-    my_list = MyList()
-
-    my_list.append(10)
-    my_list.append(1)
-    my_list.append(50)
-
-    print(my_list)
-    my_list.print_sorted()
-    print(my_list)
