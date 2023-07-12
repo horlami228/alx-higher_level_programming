@@ -6,7 +6,10 @@ Inherited from BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
-    Define a Rectangle object
+    Definition of class Rectangle that inherits from BaseGeometry.
+        Attributes:
+             width (int): width of the rectangle.
+             height (int) height of the rectangle.
     """
 
     def __init__(self, width, height):
