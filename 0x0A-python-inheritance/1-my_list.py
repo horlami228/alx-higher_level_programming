@@ -1,21 +1,14 @@
 #!/usr/bin/python3
-
-"""define a Mylist class"""
+"""
+Contains definiton for the class MyList that inherits from list.
+"""
 
 
 class MyList(list):
+    """definition for the class MyList that inherits from list.
     """
-    This class inherits from the list class
-    """
-
     def print_sorted(self):
-        list_copy = self.copy()
-        """
-        This function prints out a sorted list
-        :return: Sorted list
-        """
-        for num in self:
-            if not isinstance(num, int):
-                raise TypeError("list should be only integers")
-        list_copy.sort()
-        print(list_copy)
+        """Prints list elements in ascending order"""
+
+        sortedlist = sorted(self)
+        print(sortedlist)
