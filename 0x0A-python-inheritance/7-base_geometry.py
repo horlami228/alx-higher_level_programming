@@ -1,25 +1,19 @@
 #!/usr/bin/python3
-
-"""define a class BaseGeometry"""
+"""Defines a base geometry class BaseGeometry."""
 
 
 class BaseGeometry:
-    """define a class BaseGeometry"""
+    """Represent base geometry."""
 
     def area(self):
-        """
-        Raise an exception
-        :return: Exception
-        """
+        """Not yet implemented."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        This function validates value
-        :param name: A string
-        :param value: An integer
-        :return: None
-
+        """Validate a parameter as an integer.
+        Args:
+            name (str): The name of the parameter.
+            value (int): The parameter to validate.
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is <= 0.
