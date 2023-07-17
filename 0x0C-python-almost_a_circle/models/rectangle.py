@@ -3,7 +3,6 @@
 from models.base import Base
 
 
-
 class Rectangle(Base):
     """This class inherits from the Base class"""
 
