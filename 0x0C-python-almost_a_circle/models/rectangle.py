@@ -121,21 +121,21 @@ class Rectangle(Base):
         This public method returns the area of the rectanlge
         :return: Area (width * height)
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """
         Display Rectangle with #
         :return: visual Rectangle
         """
-        if self.__height == 0 or self.__width == 0:
+        if self.height == 0 or self.width == 0:
             return ""
 
-        for j in range(self.__y):
+        for j in range(self.y):
             print(" ")
-        for i in range(self.__height):
-            print(" " * self.__x, end="")
-            print("#" * self.__width)
+        for i in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
 
     def __str__(self):
         """
