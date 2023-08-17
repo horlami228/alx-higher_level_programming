@@ -2,4 +2,5 @@
 
 SELECT id, name
     FROM cities
-    WHERE hbtn_0d_usa.states.id = 1;
+    WHERE states.id = 1
+    ORDER BY id ASC;
