@@ -1,4 +1,4 @@
--- create a table with fields
+-- create a table with fields with default
 
 CREATE TABLE
     IF NOT EXISTS
