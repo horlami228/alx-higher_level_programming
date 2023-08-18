@@ -32,5 +32,11 @@
 [9-cities_by_state_join.sql](9-cities_by_state_join.sql)
 * > * join tables 
 
+[10-genre_id_by-show.sql](10-genre_id_by_show.sql)
+* > * sql dump
+
+[11-genre_id_all_shows.sql](11-genre_id_all_shows.sql)
+
+
 
 
