@@ -3,8 +3,8 @@
 const argv = process.argv;
 
 function secondBiggest (argv) {
-  let max = argv[2];
-  let secondMax = argv[3];
+  let max = parseInt(argv[2]);
+  let secondMax = parseInt(argv[3]);
 
   if (argv.length === 2 || argv.length === 3) {
     console.log(0);
@@ -18,11 +18,12 @@ function secondBiggest (argv) {
   }
 
   for (let i = 2; i < argv.length; i++) {
-    if (argv[i] > max) {
+    const num = parseInt(argv[i]);
+    if (num > max) {
       secondMax = max;
-      max = argv[i];
-    } else if (argv[i] > secondMax && argv[i] !== max) {
-      secondMax = argv[i];
+      max = num;
+    } else if (num > secondMax && num !== max) {
+      secondMax = num;
     }
   }
 
