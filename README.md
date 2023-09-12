@@ -1,1 +1,1 @@
-Starting with my first pyhton project for ALX
+This repository contains all my high-level language projects
