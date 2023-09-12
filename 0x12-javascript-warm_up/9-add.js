@@ -3,10 +3,10 @@
 const argv = process.argv;
 
 function add (a, b) {
-  a = parseInt(argv[2]);
-  b = parseInt(argv[3]);
+  a = parseInt(a);
+  b = parseInt(b);
 
   console.log(a + b);
 }
 
-add();
+add(argv[2], argv[3]);
