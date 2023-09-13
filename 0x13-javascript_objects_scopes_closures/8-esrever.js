@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function esrever (list) {
+exports.esrever = function (list) {
   const reversed = [];
 
   for (let i = list.length - 1; i >= 0; i--) {
@@ -8,6 +8,4 @@ function esrever (list) {
   }
 
   return reversed;
-}
-
-module.exports = esrever;
+};
