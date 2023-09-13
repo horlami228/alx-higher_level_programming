@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function nbOccurences (list, searcElement) {
+exports.nbOccurences = function (list, searcElement) {
   let count = 0;
 
   for (let i = 0; i < list.length; i++) {
@@ -11,5 +11,3 @@ function nbOccurences (list, searcElement) {
 
   return count;
 }
-
-module.exports = nbOccurences;
