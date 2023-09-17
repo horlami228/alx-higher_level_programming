@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 # This is a script that lists all states from the database hbtn_oe_0_usa
-if __name__ == "__main__":
-    import MySQLdb
-    import sys
+import MySQLdb
+import sys
 
+if __name__ == "__main__":
     my_host = "localhost"
     port = 3306
     my_user = sys.argv[1]
@@ -23,3 +23,6 @@ if __name__ == "__main__":
 
     for res in result:
         print(res)
+
+    cursor.close()
+    db.close()
