@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     sql = "SELECT * FROM states WHERE states.name = '{}' " \
-          "ORDER BY states.id".format(sys.argv[4])
+          "ORDER BY states.id ASC".format(sys.argv[4])
     cursor.execute(sql)
     searched_state = cursor.fetchall()
 
