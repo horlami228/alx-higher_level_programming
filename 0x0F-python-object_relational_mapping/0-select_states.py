@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    states = "SELECT * FROM states ORDER BY id ASC"
+    states = "SELECT id, name FROM states ORDER BY id ASC"
 
     cursor.execute(states)
     result = cursor.fetchall()
@@ -26,5 +26,5 @@ if __name__ == "__main__":
         for res in result:
             print("({}, '{}')".format(res[0], res[1]))
 
-    cursor.close()
-    db.close()
+        cursor.close()
+        db.close()
