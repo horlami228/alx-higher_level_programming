@@ -1,34 +1,42 @@
 #!/usr/bin/python3
-
 import MySQLdb
 import sys
-"""
-    This is a script that list all states
-"""
+
+# Check if the script is being run as the main program
 if __name__ == "__main__":
+    # Check if all three arguments are provided
     if len(sys.argv) != 4:
         print("Usage: python script.py <username> <password> <database>")
         sys.exit(1)
 
-    my_host = "localhost"
-    port = 3306
-    my_user = sys.argv[1]
-    my_password = sys.argv[2]
-    db_name = sys.argv[3]
+    # Retrieve command-line arguments
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database_name = sys.argv[3]
 
-    db = MySQLdb.connect(host=my_host, port=port, user=my_user,
-                         password=my_password, database=db_name)
+    try:
+        # Connect to the MySQL server on localhost at port 3306
+        connection = MySQLdb.connect(host="localhost", user=username,
+                                     passwd=password,
+                                     db=database_name, port=3306)
 
-    cursor = db.cursor()
+        # Create a cursor for database operations
+        cursor = connection.cursor()
 
-    states = "SELECT * FROM states ORDER BY id ASC"
+        # Execute the SQL query to retrieve states
+        # in ascending order by states.id
+        cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
-    cursor.execute(states)
-    result = cursor.fetchall()
+        # Fetch all the rows
+        results = cursor.fetchall()
 
-    if result is not None:
-        for res in result:
-            print("({}, '{}')".format(res[0], res[1]))
+        # Display the results
+        for row in results:
+            print(row)
 
+    except MySQLdb.Error as e:
+        print("MySQL Error:", e)
+    finally:
+        # Close the cursor and connection
         cursor.close()
-        db.close()
+        connection.close()
