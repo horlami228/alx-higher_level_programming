@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     if result is not None:
         for res in result:
-            print("({}, '{}')".format(res[0], res[1]))
+            print(res)
 
         cursor.close()
         db.close()
