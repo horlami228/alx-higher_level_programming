@@ -3,7 +3,9 @@
 
 import MySQLdb
 import sys
-# This is a script that lists all states from the database
+"""
+    This is a script that list all states
+"""
 if __name__ == "__main__":
     my_host = "localhost"
     port = 3306
@@ -16,7 +18,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    states = "SELECT * FROM states ORDER BY states.id ASC"
+    states = "SELECT * FROM states ORDER BY id ASC"
 
     cursor.execute(states)
     result = cursor.fetchall()
