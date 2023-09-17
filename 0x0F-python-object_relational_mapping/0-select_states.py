@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
-# This is a script that lists all states from the database
+
 import MySQLdb
 import sys
-
+# This is a script that lists all states from the database
 if __name__ == "__main__":
     my_host = "localhost"
     port = 3306
@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    states = "SELECT states.id, states.name FROM states ORDER BY states.id ASC"
+    states = "SELECT * FROM states ORDER BY states.id ASC"
 
     cursor.execute(states)
     result = cursor.fetchall()
