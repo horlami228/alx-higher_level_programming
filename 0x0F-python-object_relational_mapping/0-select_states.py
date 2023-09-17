@@ -6,6 +6,10 @@ import sys
     This is a script that list all states
 """
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python script.py <username> <password> <database>")
+        sys.exit(1)
+
     my_host = "localhost"
     port = 3306
     my_user = sys.argv[1]
@@ -17,7 +21,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    states = "SELECT id, name FROM states ORDER BY id ASC"
+    states = "SELECT * FROM states ORDER BY id ASC"
 
     cursor.execute(states)
     result = cursor.fetchall()
