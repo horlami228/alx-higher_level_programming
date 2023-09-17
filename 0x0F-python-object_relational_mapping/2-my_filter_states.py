@@ -28,5 +28,6 @@ if __name__ == "__main__":
     cursor.execute(sql)
     searched_state = cursor.fetchall()
 
-    for state in searched_state:
-        print(state)
+    if searched_state is not None:
+        for state in searched_state:
+            print(state)
