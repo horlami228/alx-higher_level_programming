@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# This is a script that lists all states from the database hbtn_oe_0_usa
+# This is a script that lists all states from the database
 import MySQLdb
 import sys
 
