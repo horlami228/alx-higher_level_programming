@@ -12,6 +12,6 @@ if __name__ == "__main__":
     with urlopen(url) as response:
         fetch_details = response.read()
         print("Body response:")
-        print("    - type: {}".format(type(fetch_details)))
-        print("    - content: {}".format(fetch_details))
-        print("    - utf8 content: {}".format(response.msg))
+        print("\t- type: {}".format(type(fetch_details)))
+        print("\t- content: {}".format(fetch_details))
+        print("\t- utf8 content: {}".format(response.msg))
