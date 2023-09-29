@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-from urllib.request import urlopen
-from pprint import pprint
 """
     This python script fetches from a url and
     display the response
 """
+from urllib.request import urlopen
+from pprint import pprint
+
 
 if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
