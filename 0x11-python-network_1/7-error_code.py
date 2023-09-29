@@ -7,9 +7,9 @@ from sys import argv
 import requests
 
 
-if __name__ == "__main__":
-    fetch = requests.get(argv[1])
-    if fetch.status_code < 400:
-        print(fetch.status_code)
-    else:
-        print("Error code {}".format(fetch.status_code))
+if __name__ == '__main__':
+    r = requests.get(argv[1])
+    status = r.status_code
+    print(r.text) if status < 400 else print(
+        "Error code: {}".format(r.status_code))
+    
