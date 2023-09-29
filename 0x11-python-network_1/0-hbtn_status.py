@@ -4,7 +4,6 @@
     display the response
 """
 from urllib.request import urlopen
-from pprint import pprint
 
 
 if __name__ == "__main__":
