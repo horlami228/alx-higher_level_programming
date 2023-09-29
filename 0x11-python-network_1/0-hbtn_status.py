@@ -14,4 +14,4 @@ if __name__ == "__main__":
         print("Body response:")
         print("\t- type: {}".format(type(fetch_details)))
         print("\t- content: {}".format(fetch_details))
-        print("\t- utf8 content: {}".format(response.msg))
+        print("\t- utf8 content: {}".format(fetch_details.decode("utf-8")))
