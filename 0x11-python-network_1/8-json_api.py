@@ -6,17 +6,20 @@
 """
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
-    if len(argv) == 1:
-        print("No result")
+    if len(argv) == 2:
+        q = argv[1]
     else:
-        letter = {"q": argv[1]}
-        req = requests.post("http://0.0.0.0:5000/search_user", data=letter)
-        response_body = req.text
-        data = json.loads(response_body)
-        if len(data) != 0:
-            print("[{}] {}".format(data["id"], data["name"]))
-        else:
+        q = ""
+    letter = {"q": q}
+    req = requests.post("http://0.0.0.0:5000/search_user", data=letter)
+    try:
+        req = req.json()
+        if len(req) == 0:
             print("No result")
+        else:
+            id, name = req["id"], req["name"]
+            print("[{}] {}".format(id, name))
+    except Exception:
+        print("Not a valid JSON")
