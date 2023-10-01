@@ -16,10 +16,10 @@ if __name__ == "__main__":
     req = requests.post("http://0.0.0.0:5000/search_user", data=letter)
     try:
         req = req.json()
-        id, name = req["id"], req["name"]
+        id, name = req.get("id"), req.get("name")
         if len(req) == 0 or not id or not name:
             print("No result")
         else:
             print("[{}] {}".format(id, name))
-    except Exception:
+    except:
         print("Not a valid JSON")
