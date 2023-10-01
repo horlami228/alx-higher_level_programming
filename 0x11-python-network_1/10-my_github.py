@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 
 """
-    This python script takes GitHub 
+    This python script takes GitHub
     credentials (username and password(Token))
-"""
-
-"""
     We are going to use the GitHub API to display the id
 """
 
@@ -28,4 +25,3 @@ try:
     print(req_json["id"])
 except Exception:
     print(None)
-    
