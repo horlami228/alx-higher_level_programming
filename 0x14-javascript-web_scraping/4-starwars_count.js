@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const url = 'https://swapi-api.alx-tools.com/api/films';
+const url = process.argv[2];
 let count = 0;
 
 request(url, (err, response, body) => {
@@ -21,5 +21,7 @@ request(url, (err, response, body) => {
     }
 
     console.log(count);
+  } else {
+    console.error('error:', err);
   }
 });
